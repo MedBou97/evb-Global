@@ -23,8 +23,8 @@ const navLinks = [
     href: '#services',
     subLinks: [
       { href: '/investment-consulting', label: 'Investment Consulting', icon: Building },
-      { href: '/international-loans', label: 'International Loans', icon: Building },
-      { href: '/hermes-loans', label: 'Hermes Loans', icon: Building },
+      { href: '/international-loans', label: 'International Loans', icon: Globe },
+      { href: '/hermes-loans', label: 'Hermes Loans', icon: Handshake },
       { href: '#', label: 'International Restructuring', icon: Building },
       { href: '#', label: 'M&A (Merger & Acquisition)', icon: Building },
     ],
@@ -68,6 +68,15 @@ const navLinks = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [openDropdown, setOpenDropdown] = React.useState<string | null>(null);
+
+  const handleMouseEnter = (label: string) => {
+    setOpenDropdown(label);
+  };
+
+  const handleMouseLeave = () => {
+    setOpenDropdown(null);
+  };
 
   return (
     <header
@@ -82,35 +91,41 @@ export function Header() {
         <nav className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) =>
             link.subLinks ? (
-              <DropdownMenu key={link.label}>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    className="group flex items-center gap-1 text-sm font-medium transition-colors hover:bg-accent/50 hover:text-primary rounded-md px-3 py-2"
+              <div 
+                key={link.label}
+                onMouseEnter={() => handleMouseEnter(link.label)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <DropdownMenu open={openDropdown === link.label}>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      className="group flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-primary"
+                    >
+                      {link.label}
+                      <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent 
+                    align="start"
+                    className="w-64 animate-in fade-in-0 zoom-in-95"
                   >
-                    {link.label}
-                    <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent 
-                  align="start"
-                  className="w-64 bg-background/80 backdrop-blur-xl"
-                >
-                  {link.subLinks.map((subLink) => (
-                    <DropdownMenuItem key={subLink.label} asChild>
-                      <Link href={subLink.href} className='flex items-center gap-2'>
-                        {subLink.icon && <subLink.icon className="h-4 w-4 text-muted-foreground" />}
-                        <span>{subLink.label}</span>
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                    {link.subLinks.map((subLink) => (
+                      <DropdownMenuItem key={subLink.label} asChild>
+                        <Link href={subLink.href} className='flex items-center gap-2'>
+                          {subLink.icon && <subLink.icon className="h-4 w-4 text-muted-foreground" />}
+                          <span>{subLink.label}</span>
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             ) : (
               <Link
                 key={link.label}
                 href={link.href!}
-                className="text-sm font-medium transition-colors hover:bg-accent/50 hover:text-primary rounded-md px-3 py-2"
+                className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent/50 hover:text-primary"
               >
                 {link.label}
               </Link>
