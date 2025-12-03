@@ -3,7 +3,20 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { Menu, Building, Landmark, TrendingUp, Handshake, Globe, Mail, ChevronDown, Rocket, Home as HomeIcon, FileSignature, Briefcase } from 'lucide-react';
+import {
+  Menu,
+  Building,
+  Landmark,
+  TrendingUp,
+  Handshake,
+  Globe,
+  Mail,
+  ChevronDown,
+  Rocket,
+  Home as HomeIcon,
+  FileSignature,
+  Briefcase,
+} from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -64,7 +77,6 @@ const navLinks = [
   },
 ];
 
-
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [openDropdown, setOpenDropdown] = React.useState<string | null>(null);
@@ -95,14 +107,17 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2">
-          <HomeIcon className="h-6 w-6 text-primary" />
-          <EcbLogo />
-        </Link>
-        <nav className="hidden items-center gap-1 md:flex">
+        <div className="flex-1 flex justify-start">
+          <Link href="/" className="flex items-center gap-2">
+            <HomeIcon className="h-6 w-6 text-primary" />
+            <EcbLogo />
+          </Link>
+        </div>
+        
+        <nav className="hidden items-center gap-4 md:flex flex-1 justify-center">
           {navLinks.map((link) =>
             link.subLinks ? (
-              <div 
+              <div
                 key={link.label}
                 onMouseEnter={() => handleMouseEnter(link.label)}
                 onMouseLeave={handleMouseLeave}
@@ -116,13 +131,13 @@ export function Header() {
                       </Link>
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent 
+                  <DropdownMenuContent
                     align="start"
                     className="w-64 animate-in fade-in-0 zoom-in-95"
                   >
                     {link.subLinks.map((subLink) => (
                       <DropdownMenuItem key={subLink.label} asChild>
-                        <Link href={subLink.href} className='flex items-center gap-2'>
+                        <Link href={subLink.href} className="flex items-center gap-2">
                           {subLink.icon && <subLink.icon className="h-4 w-4 text-muted-foreground" />}
                           <span>{subLink.label}</span>
                         </Link>
@@ -142,9 +157,13 @@ export function Header() {
               </Button>
             )
           )}
-           <Button onClick={scrollToContact}>İletişim</Button>
         </nav>
-        <div className="md:hidden">
+        
+        <div className="hidden md:flex flex-1 justify-end">
+           <Button onClick={scrollToContact}>İletişim</Button>
+        </div>
+
+        <div className="md:hidden flex-1 flex justify-end">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
