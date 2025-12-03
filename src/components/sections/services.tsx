@@ -1,71 +1,81 @@
-import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { LineChart, Landmark, Megaphone } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Check, ClipboardList, TrendingUp, DraftingCompass, BarChart } from 'lucide-react';
 
 const services = [
-  {
-    id: 'service-strategy',
-    icon: LineChart,
-    title: 'Strategic Consulting',
-    description: 'We help you navigate market complexities with data-driven strategies for growth, innovation, and competitive advantage. Our experts work with you to build a roadmap for long-term success.',
-  },
-  {
-    id: 'service-finance',
-    icon: Landmark,
-    title: 'Financial Advisory',
-    description: 'Our financial advisory services provide clarity and confidence in your financial decisions. From M&A to capital raising, we offer comprehensive support to optimize your financial performance.',
-  },
-  {
-    id: 'service-marketing',
-    icon: Megaphone,
-    title: 'Marketing Solutions',
-    description: 'Unlock your brand\'s potential with our cutting-edge marketing solutions. We combine creative campaigns with analytics to build brand equity and drive customer engagement in a digital-first world.',
-  },
+    {
+      icon: ClipboardList,
+      title: 'Fizibilite Hizmetleri',
+      description: 'İşletme sahiplerine veya yatırımcılara gelecekteki performans hakkında bilgi sağlamak ve riskleri minimize etmek için önemlidir.',
+      items: [
+        'Finansal Check-up',
+        'Finansal Performans Yönetimi',
+        'Finansal İzleme',
+        'Finansal Raporlama'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      title: 'Bütçe ve Planlama',
+      description: 'Finansal planlama ve bütçeleme, kişisel mali durumdan büyük ölçekli kurumsal finans yönetimine kadar her düzeyde önemlidir.',
+      items: [
+        'Finansal Strateji ve Modelleme',
+        'CFO Ofisi Dönüşümü',
+        'Yönetim Yetkinlik Analizleri',
+        'Finansal Risk Yönetimi'
+      ]
+    },
+    {
+      icon: DraftingCompass,
+      title: 'Yapılandırma',
+      description: 'Şirketlerin veya varlıkların değerlerini belirleme ve bu değerlerin optimize edilmesi için yapısal düzenlemeler yapma sürecidir.',
+      items: [
+        'Finansal Durum Tespiti',
+        'Finansal Rehabilitasyon',
+        'Finansal İletişim Stratejileri',
+        'Yapılandırma Koçluğu'
+      ]
+    },
+    {
+      icon: BarChart,
+      title: 'Sektörel Analiz',
+      description: 'Finansal tabloların incelenmesi, piyasa verilerinin analizi, sektörel trendlerin ve düzenleyici değişikliklerin takibi gibi yöntemlerle yapılır.',
+      items: [
+        'Hedef Sektör Analizi',
+        'Firma Odaklı İnceleme',
+        'Rekabet Analizi',
+        'Risk Analizi'
+      ]
+    }
 ];
 
 export function ServicesSection() {
   return (
     <section id="services" className="py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">
-            Our Core Services
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Tailored solutions designed to meet your unique business needs and drive impactful results.
-          </p>
-        </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => {
-            const serviceImage = PlaceHolderImages.find((img) => img.id === service.id);
-            return (
-              <Card key={service.title} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                {serviceImage && (
-                  <div className="aspect-video relative">
-                    <Image
-                      src={serviceImage.imageUrl}
-                      alt={serviceImage.description}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={serviceImage.imageHint}
-                    />
-                  </div>
-                )}
-                <CardHeader>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+          {services.map((service, index) => (
+            <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader>
                   <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-full bg-accent/20 text-accent">
-                      <service.icon className="h-6 w-6" />
+                    <div className="p-4 rounded-full bg-accent/20 text-accent">
+                      <service.icon className="h-8 w-8" />
                     </div>
                     <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">{service.description}</CardDescription>
-                </CardContent>
-              </Card>
-            );
-          })}
+              </CardHeader>
+              <CardContent className="flex flex-col flex-grow">
+                <p className="text-muted-foreground mb-6">{service.description}</p>
+                <ul className="space-y-3">
+                  {service.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start">
+                      <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
