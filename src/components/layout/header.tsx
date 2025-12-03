@@ -17,13 +17,44 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '..
 import { EcbLogo } from '../icons';
 
 const navLinks = [
-  { href: '#services', label: 'Corporate Finance', icon: Building },
-  { href: '#services', label: 'Corporate Governance', icon: Landmark },
+  {
+    label: 'Corporate Finance',
+    icon: Building,
+    href: '#services',
+    subLinks: [
+      { href: '#', label: 'Company Valuation' },
+      { href: '#', label: 'Mergers & Acquisitions' },
+      { href: '#', label: 'Project Finance' },
+      { href: '#', label: 'Financial Restructuring' },
+      { href: '#', label: 'Investment Advisory' },
+    ],
+  },
+  {
+    label: 'Corporate Governance',
+    icon: Landmark,
+    href: '#services',
+    subLinks: [
+      { href: '#', label: 'Corporate Governance Consulting' },
+      { href: '#', label: 'Family Business Institutionalization' },
+      { href: '#', label: 'Board Advisory' },
+    ],
+  },
   { href: '#services', label: 'Public Offering', icon: TrendingUp },
-  { href: '#services', label: 'Capital Markets', icon: Handshake },
+  {
+    label: 'Capital Market',
+    icon: Handshake,
+    href: '#services',
+    subLinks: [
+      { href: '#', label: 'Venture Capital Investment Partnership' },
+      { href: '#', label: 'Real Estate Investment Trust' },
+      { href: '#', label: 'Real Estate Investment Fund' },
+      { href: '#', label: 'Debt Instruments' },
+    ],
+  },
   {
     label: 'Foreign Fund',
     icon: Globe,
+    href: '#',
     subLinks: [
       { href: '#', label: 'Fund Establishment' },
       { href: '#', label: 'Structuring' },
@@ -38,7 +69,7 @@ const navLinks = [
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const [foreignFundMenuOpen, setForeignFundMenuOpen] = React.useState(false);
+  const [openMenu, setOpenMenu] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -62,21 +93,21 @@ export function Header() {
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) =>
             link.subLinks ? (
-              <DropdownMenu key={link.label} open={foreignFundMenuOpen} onOpenChange={setForeignFundMenuOpen}>
+              <DropdownMenu key={link.label} open={openMenu === link.label} onOpenChange={(isOpen) => setOpenMenu(isOpen ? link.label : null)}>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
                     className="text-sm font-medium transition-colors hover:text-primary"
-                     onMouseEnter={() => setForeignFundMenuOpen(true)}
-                     onMouseLeave={() => setForeignFundMenuOpen(false)}
+                     onMouseEnter={() => setOpenMenu(link.label)}
+                     onMouseLeave={() => setOpenMenu(null)}
                   >
                     {link.label}
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
                   align="start"
-                  onMouseEnter={() => setForeignFundMenuOpen(true)}
-                  onMouseLeave={() => setForeignFundMenuOpen(false)}
+                  onMouseEnter={() => setOpenMenu(link.label)}
+                  onMouseLeave={() => setOpenMenu(null)}
                 >
                   {link.subLinks.map((subLink) => (
                     <DropdownMenuItem key={subLink.label} asChild>
