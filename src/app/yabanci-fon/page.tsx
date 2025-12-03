@@ -70,7 +70,7 @@ export default function ForeignFundsPage() {
       <section className="relative h-80 w-full">
         <Image
           src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3JlaWduJTIwZnVuZHN8ZW58MHx8fHwxNzY1MTEzODc1fDA&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Yurtdışı Fonlar"
+          alt="Yurt Dışı Fonlar"
           fill
           className="object-cover"
           priority
@@ -79,7 +79,7 @@ export default function ForeignFundsPage() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl font-headline">
-            Yurtdışı Fonlar
+            Yurt Dışı Fonlar
           </h1>
         </div>
       </section>
@@ -88,12 +88,12 @@ export default function ForeignFundsPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-foreground mb-12 text-center">
-              Yurtdışı Fonlar, uluslararası yatırımcılar için çeşitli avantajlar sunan bir finansal araçtır. Vergi avantajlarından yararlanarak önemli vergisel yüklerden muafiyet elde edebilirsiniz. Ayrıca, uluslararası gayrimenkul yatırımlarına iştirak edebilir, ISIN Kodu alarak uluslararası yatırımcılardan fon toplayabilir ve dünya genelindeki borsalardan hisse alımı yapabilirsiniz.
+              Yurt Dışı Fonlar, uluslararası yatırımcılar için çeşitli avantajlar sunan bir finansal araçtır. Vergi avantajlarından yararlanarak önemli vergisel yüklerden muafiyet elde edebilirsiniz. Ayrıca, uluslararası gayrimenkul yatırımlarına iştirak edebilir, ISIN Kodu alarak uluslararası yatırımcılardan fon toplayabilir ve dünya genelindeki borsalardan hisse alımı yapabilirsiniz.
             </p>
 
             <Card className="shadow-lg mb-12">
               <CardHeader>
-                <CardTitle className="font-headline text-2xl">Yurtdışı Fonların Avantajları</CardTitle>
+                <CardTitle className="font-headline text-2xl">Yurt Dışı Fonların Avantajları</CardTitle>
               </CardHeader>
               <CardContent className="grid gap-8 md:grid-cols-1">
                 {advantages.map((advantage) => (
@@ -112,7 +112,7 @@ export default function ForeignFundsPage() {
             
             <Card className="shadow-lg mb-12">
               <CardHeader>
-                <CardTitle className="font-headline text-2xl">Yurtdışı Fonlar Konusunda Sunduğumuz Hizmetler</CardTitle>
+                <CardTitle className="font-headline text-2xl">Yurt Dışı Fonlar Konusunda Sunduğumuz Hizmetler</CardTitle>
               </CardHeader>
                <CardContent className="grid gap-8 md:grid-cols-1">
                 {services.map((service) => (
@@ -130,7 +130,7 @@ export default function ForeignFundsPage() {
             </Card>
 
             <p className="text-lg text-foreground mt-12 text-center">
-              Yurtdışı fonlar hakkında daha fazla bilgi almak ve danışmanlık hizmetlerimizden yararlanmak için lütfen bizimle iletişime geçin.
+              Yurt dışı fonlar hakkında daha fazla bilgi almak ve danışmanlık hizmetlerimizden yararlanmak için lütfen bizimle iletişime geçin.
             </p>
           </div>
         </div>

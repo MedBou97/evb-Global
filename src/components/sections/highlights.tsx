@@ -48,7 +48,7 @@ const servicesHighlights = [
   },
   {
     id: 'service-foreign-funds',
-    description: 'Yurtdışı Fonlar',
+    description: 'Yurt Dışı Fonlar',
     href: '/yabanci-fon',
     subItems: [
       {label: 'Fon Kurulumu', href: '/fon-kurulumu'}, 

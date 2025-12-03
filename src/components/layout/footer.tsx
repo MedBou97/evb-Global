@@ -7,7 +7,7 @@ const sectors = [
   { name: 'Kurumsal Yönetim', href: '/kurumsal-yonetim' },
   { name: 'Halka Arz', href: '/halka-arz' },
   { name: 'Sermaye Piyasaları', href: '/sermaye-piyasasi' },
-  { name: 'Yurtdışı Fonlar', href: '/yabanci-fon' },
+  { name: 'Yurt Dışı Fonlar', href: '/yabanci-fon' },
 ];
 
 const institutional = [
