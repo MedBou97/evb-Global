@@ -132,9 +132,8 @@ export function Header() {
                 </DropdownMenu>
               </div>
             ) : (
-              <Button asChild variant="ghost">
+              <Button key={link.label} asChild variant="ghost">
                 <Link
-                  key={link.label}
                   href={link.href!}
                   className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent/50 hover:text-primary"
                 >
