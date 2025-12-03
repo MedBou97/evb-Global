@@ -83,12 +83,12 @@ export default function InvestmentConsultingPage() {
     <>
       <section className="relative h-80 w-full">
         <Image
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBnb3Zlcm5hbmNlfGVufDB8fHx8MTc2NTM4OTQ2OHww&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnZlc3RtZW50JTIwY29uc3VsdGluZ3xlbnwwfHx8fDE3NjU4NjkwODh8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Yatırım Danışmanlığı"
           fill
           className="object-cover"
           priority
-          data-ai-hint="corporate meeting"
+          data-ai-hint="investment consulting"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">

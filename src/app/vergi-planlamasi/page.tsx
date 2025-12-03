@@ -65,7 +65,7 @@ export default function TaxPlanningPage() {
     <>
       <section className="relative h-80 w-full">
         <Image
-          src="https://images.unsplash.com/photo-1554224155-16954405a255?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0YXglMjBwbGFubmluZ3xlbnwwfHx8fDE3NjU2MTI5ODV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://images.unsplash.com/photo-1599422423301-4452f01a58e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0YXglMjBwbGFubmluZ3xlbnwwfHx8fDE3NjU4NjkwODh8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Vergi Planlaması"
           fill
           className="object-cover"

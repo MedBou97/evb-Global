@@ -51,7 +51,7 @@ export default function MergersAndAcquisitionsPage() {
     <>
       <section className="relative h-80 w-full">
         <Image
-          src="https://images.unsplash.com/photo-1556761175-b413da4baf72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZXJnZXJzJTIwYW5kJTIwYWNxdWlzaXRpb25zfGVufDB8fHx8MTc2NTM4OTQ2OHww&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZXJnZXJzJTIwYW5kJTIwYWNxdWlzaXRpb25zfGVufDB8fHx8MTc2NTg2OTA4OHww&ixlib=rb-4.1.0&q=80&w=1080"
           alt="M&A (Birleşme ve Satın Alma)"
           fill
           className="object-cover"

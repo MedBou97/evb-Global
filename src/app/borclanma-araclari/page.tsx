@@ -75,12 +75,12 @@ export default function DebtInstrumentsPage() {
     <>
       <section className="relative h-80 w-full">
         <Image
-          src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZWJ0JTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzY1NTc5MjgxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://images.unsplash.com/photo-1559223607-a43c943c7a66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiYW5raW5nJTIwZmluYW5jZXxlbnwwfHx8fDE3NjU4NjkwODh8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Borçlanma Araçları"
           fill
           className="object-cover"
           priority
-          data-ai-hint="debt instruments"
+          data-ai-hint="banking finance"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">

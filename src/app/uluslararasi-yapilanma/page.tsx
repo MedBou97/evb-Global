@@ -47,7 +47,7 @@ export default function InternationalStructuringPage() {
     <>
       <section className="relative h-80 w-full">
         <Image
-          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXJrZXQlMjBhbmFseXNpc3xlbnwwfHx8fDE3NjQ4OTg4OTl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlJTIwc3RyYXRlZ3l8ZW58MHx8fHwxNzY1ODY5MDg4fDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Uluslararası Yapılanma"
           fill
           className="object-cover"

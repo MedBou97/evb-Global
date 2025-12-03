@@ -36,7 +36,7 @@ export default function VentureCapitalPage() {
     <>
       <section className="relative h-80 w-full">
         <Image
-          src="https://images.unsplash.com/photo-1556155092-490a1ba16284?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2ZW50dXJlJTIwY2FwaXRhbHxlbnwwfHx8fDE3NjU0MDE5MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2ZW50dXJlJTIwY2FwaXRhbCUyMHN0YXJ0dXB8ZW58MHx8fHwxNzY1ODY5MDg4fDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Girişim Sermayesi Yatırım Ortaklığı"
           fill
           className="object-cover"

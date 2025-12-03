@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { Menu, Building, Landmark, TrendingUp, Handshake, Globe, Mail, ChevronDown, Rocket, Home, FileSignature, Briefcase } from 'lucide-react';
+import { Menu, Building, Landmark, TrendingUp, Handshake, Globe, Mail, ChevronDown, Rocket, Home as HomeIcon, FileSignature, Briefcase } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -48,7 +48,7 @@ const navLinks = [
     subLinks: [
       { href: '/girisim-sermayesi-yatirim-ortakligi', label: 'Girişim Sermayesi Yatırım Ortaklığı', icon: Rocket },
       { href: '/gayrimenkul-yatirim-ortakligi', label: 'Gayrimenkul Yatırım Ortaklığı', icon: Building },
-      { href: '/gayrimenkul-yatirim-fonu', label: 'Gayrimenkul Yatırım Fonu', icon: Home },
+      { href: '/gayrimenkul-yatirim-fonu', label: 'Gayrimenkul Yatırım Fonu', icon: HomeIcon },
       { href: '/borclanma-araclari', label: 'Borçlanma Araçları', icon: FileSignature },
     ],
   },
@@ -96,6 +96,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
+          <HomeIcon className="h-6 w-6 text-primary" />
           <EcbLogo />
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
@@ -156,6 +157,7 @@ export function Header() {
               <div className="flex h-full flex-col">
                 <div className="p-6 border-b">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+                      <HomeIcon className="h-6 w-6 text-primary" />
                       <EcbLogo />
                     </Link>
                 </div>
