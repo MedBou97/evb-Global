@@ -46,7 +46,7 @@ const navLinks = [
     icon: Handshake,
     href: '#services',
     subLinks: [
-      { href: '#', label: 'Girişim Sermayesi Yatırım Ortaklığı', icon: Handshake },
+      { href: '/girisim-sermayesi-yatirim-ortakligi', label: 'Girişim Sermayesi Yatırım Ortaklığı', icon: Handshake },
       { href: '#', label: 'Gayrimenkul Yatırım Ortaklığı', icon: Handshake },
       { href: '#', label: 'Gayrimenkul Yatırım Fonu', icon: Handshake },
       { href: '#', label: 'Borçlanma Araçları', icon: Handshake },
