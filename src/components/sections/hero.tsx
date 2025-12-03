@@ -1,8 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
@@ -29,13 +26,6 @@ export function HeroSection() {
             <p className="mt-6 text-lg text-gray-200 md:text-xl">
               At ECB Global, we partner with you to unlock your business's full potential. Our innovative solutions and data-driven insights pave the way for sustainable growth and market leadership.
             </p>
-            <div className="mt-10">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="#contact">
-                  Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </div>
