@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -23,7 +24,7 @@ const servicesHighlights = [
     description: 'Kurumsal Yönetim',
     href: '#services',
     subItems: [
-      {label: 'Kurumsal Risk Yönetimi', href: '#'},
+      {label: 'Kurumsal Risk Yönetimi', href: '/kurumsal-risk-yonetimi'},
       {label: 'Aile Şirketlerinde Kurumsallaşma', href: '#'},
       {label: 'Sürdürülebilirlik', href: '#'},
     ],
@@ -110,13 +111,8 @@ export function HighlightsSection() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">Hizmetlerimiz</h2>
           <p className="mt-4 text-lg text-muted-foreground">Görsel bir bakışla sunduğumuz temel hizmet alanları.</p>
         </div>
-        <div className="flex flex-col items-center gap-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-            {topRowImages.map(renderHighlightCard)}
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:w-2/3 lg:w-2/3">
-            {bottomRowImages.map(renderHighlightCard)}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {highlightImages.map(renderHighlightCard)}
         </div>
       </div>
     </section>

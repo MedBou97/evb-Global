@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -34,7 +35,7 @@ const navLinks = [
     icon: Landmark,
     href: '#services',
     subLinks: [
-      { href: '#', label: 'Kurumsal Risk Yönetimi', icon: Landmark },
+      { href: '/kurumsal-risk-yonetimi', label: 'Kurumsal Risk Yönetimi', icon: Landmark },
       { href: '#', label: 'Aile Şirketlerinde Kurumsallaşma', icon: Landmark },
       { href: '#', label: 'Sürdürülebilirlik', icon: Landmark },
     ],
