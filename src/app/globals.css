@@ -71,15 +71,11 @@
 }
 
 @layer utilities {
-  @keyframes scroll {
-    to {
-      transform: translate(calc(-50% - 0.5rem));
-    }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
-
-  .scrolling-belt {
-    display: flex;
-    flex-wrap: nowrap;
-    animation: scroll 40s linear infinite;
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

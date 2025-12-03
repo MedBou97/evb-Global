@@ -13,10 +13,10 @@
       "imageHint": "feasibility study"
     },
     {
-      "id": "service-budget",
-      "description": "Bütçe ve Planlama",
-      "imageUrl": "https://images.unsplash.com/photo-1554224155-169544351742?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhY2NvdW50aW5nJTIwYnVkZ2V0fGVufDB8fHx8MTc2NDg5ODg5OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "budget planning"
+      "id": "service-governance",
+      "description": "Kurumsal Yönetim",
+      "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBnb3Zlcm5hbmNlfGVufDB8fHx8MTc2NTM4OTQ2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate governance"
     },
     {
       "id": "service-structuring",

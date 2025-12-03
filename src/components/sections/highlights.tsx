@@ -1,5 +1,9 @@
+'use client';
+
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const servicesHighlights = [
@@ -9,7 +13,7 @@ const servicesHighlights = [
     href: '#services',
   },
   {
-    id: 'service-budget',
+    id: 'service-governance',
     description: 'Corporate Governance',
     href: '#services',
   },
@@ -30,17 +34,69 @@ const servicesHighlights = [
   },
 ];
 
-export function HighlightsSection() {
-  const highlightImages = servicesHighlights.map(service => {
-    const placeholder = PlaceHolderImages.find(img => img.id === service.id);
-    return {
-      ...service,
-      imageUrl: placeholder?.imageUrl,
-      imageHint: placeholder?.imageHint,
-      altText: placeholder?.description || service.description,
-    };
+const highlightImages = servicesHighlights.map((service) => {
+  const placeholder = PlaceHolderImages.find((img) => img.id === service.id);
+  return {
+    ...service,
+    imageUrl: placeholder?.imageUrl,
+    imageHint: placeholder?.imageHint,
+    altText: placeholder?.description || service.description,
+  };
+});
+
+function HighlightCard({
+  image,
+  index,
+  total,
+  progress,
+}: {
+  image: (typeof highlightImages)[0];
+  index: number;
+  total: number;
+  progress: any;
+}) {
+  const scale = useTransform(progress, (latest) => {
+    const center = index / (total -1);
+    const distanceFromCenter = Math.abs(latest - center);
+    
+    // The scaling effect is strongest at the center (0.5) and weakest at the edges (0 and 1)
+    const normalizedDistance = distanceFromCenter / 0.5;
+    const scaleValue = 1 - normalizedDistance * 0.2; // Scale down by up to 20%
+    
+    // Add a "lens" effect by scaling up the item in the very center
+    const lensEffect = Math.max(0, 1 - Math.abs(latest - 0.5) * 4);
+    
+    return scaleValue + lensEffect * 0.2;
   });
-  
+
+  return (
+    <motion.div
+      style={{ scale }}
+      className="relative aspect-video overflow-hidden rounded-lg shadow-lg group flex-shrink-0 w-80"
+    >
+      <Link href={image.href} className="block w-full h-full">
+        {image.imageUrl && (
+          <Image
+            src={image.imageUrl}
+            alt={image.altText}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            data-ai-hint={image.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute bottom-0 left-0 p-4">
+          <p className="text-white font-semibold">{image.description}</p>
+        </div>
+      </Link>
+    </motion.div>
+  );
+}
+
+export function HighlightsSection() {
+  const scrollRef = useRef(null);
+  const { scrollXProgress } = useScroll({ container: scrollRef });
+
   const duplicatedImages = [...highlightImages, ...highlightImages];
 
   return (
@@ -51,26 +107,31 @@ export function HighlightsSection() {
           <p className="mt-4 text-lg text-muted-foreground">Görsel bir bakışla sunduğumuz temel hizmet alanları.</p>
         </div>
       </div>
-      <div className="w-full overflow-hidden relative" style={{ maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)'}}>
-        <div className="scrolling-belt flex gap-4">
+      <div
+        ref={scrollRef}
+        className="w-full overflow-x-auto relative no-scrollbar"
+        style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'}}
+      >
+        <motion.div
+          className="flex gap-8 px-[calc(50%-10rem)]"
+          style={{ x: useTransform(scrollXProgress, [0, 1], ['0%', '-50%']) }}
+          animate={{ x: [null, '0%', '-50%'] }}
+          transition={{
+            x: { repeat: Infinity, repeatType: "loop", duration: 40, ease: "linear" },
+          }}
+        >
           {duplicatedImages.map((image, index) => (
             image.imageUrl && (
-              <Link key={`${image.id}-${index}`} href={image.href} className="block relative aspect-video overflow-hidden rounded-lg shadow-lg group flex-shrink-0 w-80">
-                <Image
-                  src={image.imageUrl}
-                  alt={image.altText}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  data-ai-hint={image.imageHint}
-                />
-                <div className="absolute inset-0 bg-black/40" />
-                 <div className="absolute bottom-0 left-0 p-4">
-                  <p className="text-white font-semibold">{image.description}</p>
-                </div>
-              </Link>
+              <HighlightCard 
+                key={`${image.id}-${index}`} 
+                image={image} 
+                index={index}
+                total={duplicatedImages.length}
+                progress={useTransform(scrollXProgress, (latest) => (latest + index / duplicatedImages.length) % 1)}
+              />
             )
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
