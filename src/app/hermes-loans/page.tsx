@@ -54,12 +54,12 @@ export default function HermesLoansPage() {
     <>
       <section className="relative h-80 w-full">
         <Image
-          src="https://images.unsplash.com/photo-1561464363-39458c035a0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnZXJtYW4lMjBleHBvcnR8ZW58MHx8fHwxNzY1Mzg5NDY4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3JlaWduJTIwZnVuZHN8ZW58MHx8fHwxNzY1MTEzODc1fDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Hermes Kredileri"
           fill
           className="object-cover"
           priority
-          data-ai-hint="german export"
+          data-ai-hint="international trade"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
