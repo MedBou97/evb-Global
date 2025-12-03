@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Twitter, Linkedin, Facebook, Mail, Phone, MapPin } from 'lucide-react';
-import { EcbLogo } from '@/components/icons';
 
 const sectors = [
   { name: 'Corporate Finance', href: '#' },
@@ -18,12 +17,12 @@ const institutional = [
 
 export function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer id="contact" className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 py-12 md:px-6">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <EcbLogo className="h-10 w-auto" />
+              <span className="text-2xl font-bold tracking-tight text-primary">ECB Global</span>
             </Link>
             <div className="flex items-start gap-3 mt-4">
               <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
