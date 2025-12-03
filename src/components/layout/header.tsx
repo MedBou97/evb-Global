@@ -53,7 +53,7 @@ const navLinks = [
     ],
   },
   {
-    label: 'Yabancı Fon',
+    label: 'Yurtdışı Fon',
     icon: Globe,
     href: '/yabanci-fon',
     subLinks: [

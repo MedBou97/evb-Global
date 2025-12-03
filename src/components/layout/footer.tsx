@@ -3,11 +3,11 @@ import { Twitter, Linkedin, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import { EcbLogo } from '../icons';
 
 const sectors = [
-  { name: 'Kurumsal Finansman', href: '#' },
-  { name: 'Kurumsal Yönetim', href: '#' },
-  { name: 'Halka Arz', href: '#' },
-  { name: 'Sermaye Piyasaları', href: '#' },
-  { name: 'Yabancı Fonlar', href: '#' },
+  { name: 'Kurumsal Finansman', href: '/kurumsal-finansman' },
+  { name: 'Kurumsal Yönetim', href: '/kurumsal-yonetim' },
+  { name: 'Halka Arz', href: '/halka-arz' },
+  { name: 'Sermaye Piyasaları', href: '/sermaye-piyasasi' },
+  { name: 'Yurtdışı Fonlar', href: '/yabanci-fon' },
 ];
 
 const institutional = [

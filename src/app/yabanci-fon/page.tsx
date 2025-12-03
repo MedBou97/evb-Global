@@ -70,7 +70,7 @@ export default function ForeignFundsPage() {
       <section className="relative h-80 w-full">
         <Image
           src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3JlaWduJTIwZnVuZHN8ZW58MHx8fHwxNzY1MTEzODc1fDA&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Yabancı Fonlar"
+          alt="Yurtdışı Fonlar"
           fill
           className="object-cover"
           priority
@@ -112,7 +112,7 @@ export default function ForeignFundsPage() {
             
             <Card className="shadow-lg mb-12">
               <CardHeader>
-                <CardTitle className="font-headline text-2xl">Yurt Dışı Fonlar Konusunda Sunduğumuz Hizmetler</CardTitle>
+                <CardTitle className="font-headline text-2xl">Yurtdışı Fonlar Konusunda Sunduğumuz Hizmetler</CardTitle>
               </CardHeader>
                <CardContent className="grid gap-8 md:grid-cols-1">
                 {services.map((service) => (
