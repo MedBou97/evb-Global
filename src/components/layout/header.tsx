@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { Menu, Briefcase, Users, MessageSquare, Info, Contact, Building } from 'lucide-react';
+import { Menu, Info, Briefcase, Users, MessageSquare, Contact } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -49,12 +49,12 @@ export function Header() {
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
-        isScrolled ? 'bg-background/80 shadow-md backdrop-blur-sm' : 'bg-transparent'
+        isScrolled ? 'bg-background/95 shadow-md backdrop-blur-sm' : 'bg-transparent'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" aria-label="ECB Global Home">
-          <EcbLogo className="h-12 w-auto" />
+          <EcbLogo className="h-10 w-auto" />
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) =>
