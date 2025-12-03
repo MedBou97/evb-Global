@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         body: ['"Roboto"', 'sans-serif'],
         headline: ['"Montserrat"', 'sans-serif'],
+        logo: ['"Cinzel"', 'serif'],
         code: ['monospace'],
       },
       colors: {
