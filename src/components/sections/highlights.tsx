@@ -11,11 +11,11 @@ const servicesHighlights = [
     description: 'Kurumsal Finansman',
     href: '#services',
     subItems: [
-      'Yatırım Danışmanlığı',
-      'Uluslararası Krediler',
-      'Hermes Kredileri',
-      'Uluslararası Yeniden Yapılandırma',
-      'M&A (Birleşme ve Satın Alma)',
+      {label: 'Yatırım Danışmanlığı', href: '/investment-consulting'},
+      {label: 'Uluslararası Krediler', href: '/international-loans'},
+      {label: 'Hermes Kredileri', href: '/hermes-loans'},
+      {label: 'Uluslararası Yapılanma', href: '/uluslararasi-yapilanma'},
+      {label: 'M&A (Birleşme ve Satın Alma)', href: '#'},
     ],
   },
   {
@@ -23,9 +23,9 @@ const servicesHighlights = [
     description: 'Kurumsal Yönetim',
     href: '#services',
     subItems: [
-      'Kurumsal Risk Yönetimi',
-      'Aile Şirketlerinde Kurumsallaşma',
-      'Sürdürülebilirlik',
+      {label: 'Kurumsal Risk Yönetimi', href: '#'},
+      {label: 'Aile Şirketlerinde Kurumsallaşma', href: '#'},
+      {label: 'Sürdürülebilirlik', href: '#'},
     ],
   },
   {
@@ -39,17 +39,21 @@ const servicesHighlights = [
     description: 'Sermaye Piyasaları',
     href: '#services',
     subItems: [
-      'Girişim Sermayesi Yatırım Ortaklığı',
-      'Gayrimenkul Yatırım Ortaklığı',
-      'Gayrimenkul Yatırım Fonu',
-      'Borçlanma Araçları',
+      {label: 'Girişim Sermayesi Yatırım Ortaklığı', href: '#'},
+      {label: 'Gayrimenkul Yatırım Ortaklığı', href: '#'},
+      {label: 'Gayrimenkul Yatırım Fonu', href: '#'},
+      {label: 'Borçlanma Araçları', href: '#'},
     ],
   },
   {
     id: 'service-foreign-funds',
     description: 'Yabancı Fonlar',
     href: '#services',
-    subItems: ['Fon Kurulumu', 'Yapılandırma', 'Vergi Planlaması'],
+    subItems: [
+      {label: 'Fon Kurulumu', href: '#'}, 
+      {label: 'Yapılandırma', href: '#'}, 
+      {label: 'Vergi Planlaması', href: '#'}
+    ],
   },
 ];
 
@@ -69,8 +73,8 @@ const bottomRowImages = highlightImages.slice(3);
 
 export function HighlightsSection() {
   const renderHighlightCard = (image: (typeof highlightImages)[0]) => (
-    <Link key={image.id} href={image.href} className="block group flex flex-col">
-      <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg mb-4">
+    <div key={image.id} className="block group flex flex-col">
+      <Link href={image.href} className="block relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg mb-4">
         {image.imageUrl && (
           <Image
             src={image.imageUrl}
@@ -83,18 +87,20 @@ export function HighlightsSection() {
           <div className="absolute inset-0 bg-black/40 flex items-end">
             <h3 className="text-white font-semibold p-4 text-lg">{image.description}</h3>
           </div>
-      </div>
+      </Link>
       {image.subItems && image.subItems.length > 0 && (
         <ul className="space-y-2 mt-4 text-sm flex-grow">
           {image.subItems.map((item) => (
-            <li key={item} className="flex items-start text-muted-foreground">
-              <Check className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-              <span>{item}</span>
+             <li key={item.label}>
+             <Link href={item.href} className="flex items-start text-muted-foreground transition-colors hover:text-primary">
+                <Check className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                <span>{item.label}</span>
+              </Link>
             </li>
           ))}
         </ul>
       )}
-    </Link>
+    </div>
   );
 
   return (

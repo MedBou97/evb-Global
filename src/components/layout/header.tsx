@@ -25,7 +25,7 @@ const navLinks = [
       { href: '/investment-consulting', label: 'Yatırım Danışmanlığı', icon: Building },
       { href: '/international-loans', label: 'Uluslararası Krediler', icon: Globe },
       { href: '/hermes-loans', label: 'Hermes Kredileri', icon: Handshake },
-      { href: '#', label: 'Uluslararası Yeniden Yapılandırma', icon: Building },
+      { href: '/uluslararasi-yapilanma', label: 'Uluslararası Yapılanma', icon: Building },
       { href: '#', label: 'M&A (Birleşme ve Satın Alma)', icon: Handshake },
     ],
   },
