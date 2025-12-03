@@ -34,9 +34,9 @@ const navLinks = [
     icon: Landmark,
     href: '#services',
     subLinks: [
-      { href: '#', label: 'Corporate Governance Consulting' },
-      { href: '#', label: 'Family Business Institutionalization' },
-      { href: '#', label: 'Board Advisory' },
+      { href: '#', label: 'Enterprise Risk Management' },
+      { href: '#', label: 'Institutionalization in Family Businesses' },
+      { href: '#', label: 'Sustainability' },
     ],
   },
   { href: '#services', label: 'Public Offering', icon: TrendingUp },
