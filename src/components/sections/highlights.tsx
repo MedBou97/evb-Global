@@ -40,6 +40,8 @@ export function HighlightsSection() {
       altText: placeholder?.description || service.description,
     };
   });
+  
+  const duplicatedImages = [...highlightImages, ...highlightImages];
 
   return (
     <section id="highlights" className="py-16 md:py-24 bg-background">
@@ -48,10 +50,12 @@ export function HighlightsSection() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">Hizmetlerimiz</h2>
           <p className="mt-4 text-lg text-muted-foreground">Görsel bir bakışla sunduğumuz temel hizmet alanları.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-          {highlightImages.map((image) => (
+      </div>
+      <div className="w-full overflow-hidden relative" style={{ maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)'}}>
+        <div className="scrolling-belt flex gap-4">
+          {duplicatedImages.map((image, index) => (
             image.imageUrl && (
-              <Link key={image.id} href={image.href} className="block relative aspect-video overflow-hidden rounded-lg shadow-lg group">
+              <Link key={`${image.id}-${index}`} href={image.href} className="block relative aspect-video overflow-hidden rounded-lg shadow-lg group flex-shrink-0 w-80">
                 <Image
                   src={image.imageUrl}
                   alt={image.altText}

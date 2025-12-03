@@ -69,3 +69,17 @@
     @apply scroll-smooth;
   }
 }
+
+@layer utilities {
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  .scrolling-belt {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll 40s linear infinite;
+  }
+}
