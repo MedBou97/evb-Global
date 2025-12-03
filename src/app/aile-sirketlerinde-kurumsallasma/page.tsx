@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Gavel,
-  Sitemap,
+  Network,
   Users,
   Award,
 } from 'lucide-react';
@@ -17,7 +17,7 @@ const services = [
   {
     title: 'Kurumsal Yapılandırma',
     description: 'Şirket içi organizasyon yapılarının güçlendirilmesi, görev ve sorumlulukların netleştirilmesi.',
-    icon: Sitemap,
+    icon: Network,
   },
   {
     title: 'Gelecek Nesil Planlaması',
