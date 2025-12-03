@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Check, ClipboardList, TrendingUp, DraftingCompass, BarChart } from 'lucide-react';
+import { AnimatedSection } from '../animated-section';
 
 const services = [
     {
@@ -54,27 +55,29 @@ export function ServicesSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {services.map((service, index) => (
-            <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <div className="p-4 rounded-full bg-accent/20 text-accent">
-                      <service.icon className="h-8 w-8" />
+            <AnimatedSection key={index} delay={index * 100}>
+              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="p-4 rounded-full bg-accent/20 text-accent">
+                        <service.icon className="h-8 w-8" />
+                      </div>
+                      <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
                     </div>
-                    <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
-                  </div>
-              </CardHeader>
-              <CardContent className="flex flex-col flex-grow">
-                <p className="text-muted-foreground mb-6">{service.description}</p>
-                <ul className="space-y-3">
-                  {service.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                </CardHeader>
+                <CardContent className="flex flex-col flex-grow">
+                  <p className="text-muted-foreground mb-6">{service.description}</p>
+                  <ul className="space-y-3 mt-auto">
+                    {service.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start">
+                        <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                        <span className="text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           ))}
         </div>
       </div>

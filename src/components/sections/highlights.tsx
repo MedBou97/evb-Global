@@ -7,6 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '../ui/badge';
+import { AnimatedSection } from '../animated-section';
 
 const servicesHighlights = [
   {
@@ -121,13 +122,17 @@ export function HighlightsSection() {
   return (
     <section id="highlights" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">Hizmetlerimiz</h2>
-          <p className="mt-4 text-lg text-muted-foreground">Görsel bir bakışla sunduğumuz temel hizmet alanları.</p>
-        </div>
+        <AnimatedSection>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">Hizmetlerimiz</h2>
+            <p className="mt-4 text-lg text-muted-foreground">Görsel bir bakışla sunduğumuz temel hizmet alanları.</p>
+          </div>
+        </AnimatedSection>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {highlightImages.map((item) => (
-                <ServiceCard key={item.id} item={item} />
+            {highlightImages.map((item, index) => (
+                <AnimatedSection key={item.id} delay={index * 100}>
+                    <ServiceCard item={item} />
+                </AnimatedSection>
             ))}
         </div>
       </div>
