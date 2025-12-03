@@ -27,14 +27,14 @@
     {
       "id": "service-analysis",
       "description": "Sermaye Piyasası",
-      "imageUrl": "https://images.unsplash.com/photo-1628872425969-63168bcb0814?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXBpdGFsJTIwbWFya2V0c3xlbnwwfHx8fDE3NjU4NjkwODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "capital markets"
+      "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXBpdGFsJTIwbWFya2V0cyUyMHN0b2NrfGVufDB8fHx8MTc2NjM0MDU0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "capital markets stock"
     },
     {
       "id": "service-foreign-funds",
       "description": "Yurt Dışı Fonlar",
-      "imageUrl": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3JlaWduJTIwZnVuZHN8ZW58MHx8fHwxNzY1MTEzODc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "foreign funds"
+      "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBmaW5hbmNlfGVufDB8fHx8MTc2NjM0MDU0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "global finance"
     },
     {
       "id": "service-blog",
