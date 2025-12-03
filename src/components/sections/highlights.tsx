@@ -51,7 +51,7 @@ const servicesHighlights = [
     description: 'Yabancı Fonlar',
     href: '#services',
     subItems: [
-      {label: 'Fon Kurulumu', href: '#'}, 
+      {label: 'Fon Kurulumu', href: '/fon-kurulumu'}, 
       {label: 'Yapılandırma', href: '#'}, 
       {label: 'Vergi Planlaması', href: '#'}
     ],
