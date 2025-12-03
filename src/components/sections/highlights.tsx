@@ -25,7 +25,7 @@ const servicesHighlights = [
     href: '#services',
     subItems: [
       {label: 'Kurumsal Risk Yönetimi', href: '/kurumsal-risk-yonetimi'},
-      {label: 'Aile Şirketlerinde Kurumsallaşma', href: '#'},
+      {label: 'Aile Şirketlerinde Kurumsallaşma', href: '/aile-sirketlerinde-kurumsallasma'},
       {label: 'Sürdürülebilirlik', href: '#'},
     ],
   },
@@ -67,10 +67,6 @@ const highlightImages = servicesHighlights.map((service) => {
     altText: placeholder?.description || service.description,
   };
 });
-
-const topRowImages = highlightImages.slice(0, 3);
-const bottomRowImages = highlightImages.slice(3);
-
 
 export function HighlightsSection() {
   const renderHighlightCard = (image: (typeof highlightImages)[0]) => (
