@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Badge } from '../ui/badge';
 
 const servicesHighlights = [
   {
@@ -57,6 +58,13 @@ const servicesHighlights = [
       {label: 'Vergi Planlaması', href: '/vergi-planlamasi'}
     ],
   },
+  {
+    id: 'service-blog',
+    description: 'Blog',
+    href: '/blog',
+    subItems: [],
+    status: 'coming-soon'
+  },
 ];
 
 const highlightImages = servicesHighlights.map((service) => {
@@ -69,36 +77,44 @@ const highlightImages = servicesHighlights.map((service) => {
   };
 });
 
-const ServiceCard = ({ item, className }: { item: (typeof highlightImages)[0]; className?: string }) => (
-    <div className={cn("flex flex-col group", className)}>
-      <Link href={item.href} className="block relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg mb-4">
-        {item.imageUrl && (
-          <Image
-            src={item.imageUrl}
-            alt={item.altText}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            data-ai-hint={item.imageHint}
-          />
+const ServiceCard = ({ item, className }: { item: (typeof highlightImages)[0]; className?: string }) => {
+    const isComingSoon = item.status === 'coming-soon';
+    const CardLink = isComingSoon ? 'div' : Link;
+
+    return (
+        <div className={cn("flex flex-col group", className)}>
+        <CardLink href={item.href} className={cn("block relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg mb-4", isComingSoon ? "cursor-not-allowed" : "")}>
+            {item.imageUrl && (
+            <Image
+                src={item.imageUrl}
+                alt={item.altText}
+                fill
+                className={cn("object-cover transition-transform duration-300", !isComingSoon && "group-hover:scale-105")}
+                data-ai-hint={item.imageHint}
+            />
+            )}
+            <div className="absolute inset-0 bg-black/40 flex items-end">
+                <h3 className="text-white font-semibold p-4 text-lg">{item.description}</h3>
+            </div>
+            {isComingSoon && (
+                <Badge variant="secondary" className="absolute top-3 right-3">Çok Yakında</Badge>
+            )}
+        </CardLink>
+        {item.subItems && item.subItems.length > 0 && (
+            <ul className="space-y-2 mt-4 text-sm flex-grow">
+            {item.subItems.map((subItem) => (
+                <li key={subItem.label}>
+                <Link href={subItem.href} className="flex items-start text-muted-foreground transition-colors hover:text-primary">
+                    <Check className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                    <span>{subItem.label}</span>
+                </Link>
+                </li>
+            ))}
+            </ul>
         )}
-          <div className="absolute inset-0 bg-black/40 flex items-end">
-            <h3 className="text-white font-semibold p-4 text-lg">{item.description}</h3>
-          </div>
-      </Link>
-      {item.subItems && item.subItems.length > 0 && (
-        <ul className="space-y-2 mt-4 text-sm flex-grow">
-          {item.subItems.map((subItem) => (
-             <li key={subItem.label}>
-             <Link href={subItem.href} className="flex items-start text-muted-foreground transition-colors hover:text-primary">
-                <Check className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span>{subItem.label}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+        </div>
+    );
+};
 
 
 export function HighlightsSection() {
@@ -118,3 +134,5 @@ export function HighlightsSection() {
     </section>
   );
 }
+
+    

@@ -8,9 +8,9 @@
     },
     {
       "id": "service-feasibility",
-      "description": "Fizibilite Hizmetleri",
-      "imageUrl": "https://images.unsplash.com/photo-1556740758-90de374c12ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmZWFzaWJpbGl0eSUyMHN0dWR5fGVufDB8fHx8MTc2NDg5ODg5OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "feasibility study"
+      "description": "Kurumsal Finansman",
+      "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBmaW5hbmNlfGVufDB8fHx8MTc2NTY5ODQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate finance"
     },
     {
       "id": "service-governance",
@@ -20,27 +20,27 @@
     },
     {
       "id": "service-structuring",
-      "description": "Yapılandırma",
-      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0cnVjdHVyZXxlbnwwfHx8fDE3NjQ4OTg4OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "business structure"
+      "description": "Halka Arz",
+      "imageUrl": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpcG8lMjBzdG9jayUyMG1hcmtldHxlbnwwfHx8fDE3NjU3MTE4NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stock market"
     },
     {
       "id": "service-analysis",
-      "description": "Sektörel Analiz",
-      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXJrZXQlMjBhbmFseXNpc3xlbnwwfHx8fDE3NjQ4OTg4OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "market analysis"
+      "description": "Sermaye Piyasası",
+      "imageUrl": "https://images.unsplash.com/photo-1628872425969-63168bcb0814?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXBpdGFsJTIwbWFya2V0c3xlbnwwfHx8fDE3NjU4NjkwODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "capital markets"
     },
     {
       "id": "service-foreign-funds",
-      "description": "Yabancı Fonlar",
+      "description": "Yurt Dışı Fonlar",
       "imageUrl": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3JlaWduJTIwZnVuZHN8ZW58MHx8fHwxNzY1MTEzODc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "foreign funds"
     },
     {
-      "id": "service-debt-instruments",
-      "description": "Borçlanma Araçları",
-      "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZWJ0JTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzY1NTc5MjgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "debt instruments"
+      "id": "service-blog",
+      "description": "Blog",
+      "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibG9nJTIwd3JpdGluZ3xlbnwwfHx8fDE3NjYyNjUwMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blog writing"
     },
     {
       "id": "team-member-1",
@@ -57,8 +57,8 @@
     {
       "id": "team-member-3",
       "description": "Professional headshot of Emily White, COO.",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjB3b21hbnxlbnwwfHx8fDE3NjQ3OTAxOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "corporate woman"
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHhjBcnBvcmF0ZSUyMHdvbWFuJTIwZGFya3xlbnwwfHx8fDE3NjYyNjM5NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate woman dark"
     },
     {
       "id": "team-member-4",
