@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { Menu, Building, Landmark, TrendingUp, Handshake, Globe, Rss, Mail, ChevronDown } from 'lucide-react';
+import { Menu, Building, Landmark, TrendingUp, Handshake, Globe, Rss, Mail, ChevronDown, Rocket, Home, FileSignature, Briefcase } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -44,12 +44,12 @@ const navLinks = [
   {
     label: 'Sermaye Piyasası',
     icon: Handshake,
-    href: '#services',
+    href: '/sermaye-piyasasi',
     subLinks: [
-      { href: '/girisim-sermayesi-yatirim-ortakligi', label: 'Girişim Sermayesi Yatırım Ortaklığı', icon: Handshake },
-      { href: '/gayrimenkul-yatirim-ortakligi', label: 'Gayrimenkul Yatırım Ortaklığı', icon: Handshake },
-      { href: '/gayrimenkul-yatirim-fonu', label: 'Gayrimenkul Yatırım Fonu', icon: Handshake },
-      { href: '/borclanma-araclari', label: 'Borçlanma Araçları', icon: Handshake },
+      { href: '/girisim-sermayesi-yatirim-ortakligi', label: 'Girişim Sermayesi Yatırım Ortaklığı', icon: Rocket },
+      { href: '/gayrimenkul-yatirim-ortakligi', label: 'Gayrimenkul Yatırım Ortaklığı', icon: Building },
+      { href: '/gayrimenkul-yatirim-fonu', label: 'Gayrimenkul Yatırım Fonu', icon: Home },
+      { href: '/borclanma-araclari', label: 'Borçlanma Araçları', icon: FileSignature },
     ],
   },
   {
@@ -57,7 +57,7 @@ const navLinks = [
     icon: Globe,
     href: '#',
     subLinks: [
-      { href: '/fon-kurulumu', label: 'Fon Kurulumu', icon: Globe },
+      { href: '/fon-kurulumu', label: 'Fon Kurulumu', icon: Briefcase },
       { href: '/yapilandirma', label: 'Yapılandırma', icon: Globe },
       { href: '/vergi-planlamasi', label: 'Vergi Planlaması', icon: Globe },
     ],

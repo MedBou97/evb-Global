@@ -37,8 +37,8 @@ const servicesHighlights = [
   },
   {
     id: 'service-analysis',
-    description: 'Sermaye Piyasaları',
-    href: '#services',
+    description: 'Sermaye Piyasası',
+    href: '/sermaye-piyasasi',
     subItems: [
       {label: 'Girişim Sermayesi Yatırım Ortaklığı', href: '/girisim-sermayesi-yatirim-ortakligi'},
       {label: 'Gayrimenkul Yatırım Ortaklığı', href: '/gayrimenkul-yatirim-ortakligi'},
