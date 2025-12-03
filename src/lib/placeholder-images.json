@@ -37,6 +37,12 @@
       "imageHint": "foreign funds"
     },
     {
+      "id": "service-debt-instruments",
+      "description": "Borçlanma Araçları",
+      "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZWJ0JTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzY1NTc5MjgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "debt instruments"
+    },
+    {
       "id": "team-member-1",
       "description": "Professional headshot of Jane Doe, CEO.",
       "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NjQ3NjIxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080",

@@ -43,7 +43,7 @@ const servicesHighlights = [
       {label: 'Girişim Sermayesi Yatırım Ortaklığı', href: '/girisim-sermayesi-yatirim-ortakligi'},
       {label: 'Gayrimenkul Yatırım Ortaklığı', href: '/gayrimenkul-yatirim-ortakligi'},
       {label: 'Gayrimenkul Yatırım Fonu', href: '/gayrimenkul-yatirim-fonu'},
-      {label: 'Borçlanma Araçları', href: '#'},
+      {label: 'Borçlanma Araçları', href: '/borclanma-araclari'},
     ],
   },
   {
