@@ -41,7 +41,7 @@ const servicesHighlights = [
     href: '#services',
     subItems: [
       {label: 'Girişim Sermayesi Yatırım Ortaklığı', href: '/girisim-sermayesi-yatirim-ortakligi'},
-      {label: 'Gayrimenkul Yatırım Ortaklığı', href: '#'},
+      {label: 'Gayrimenkul Yatırım Ortaklığı', href: '/gayrimenkul-yatirim-ortakligi'},
       {label: 'Gayrimenkul Yatırım Fonu', href: '#'},
       {label: 'Borçlanma Araçları', href: '#'},
     ],
