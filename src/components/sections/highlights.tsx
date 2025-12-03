@@ -2,9 +2,39 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
+const servicesHighlights = [
+  {
+    id: 'service-feasibility',
+    description: 'Corporate Finance',
+    href: '#services',
+  },
+  {
+    id: 'service-budget',
+    description: 'Corporate Governance',
+    href: '#services',
+  },
+  {
+    id: 'service-structuring',
+    description: 'Public Offering',
+    href: '#services',
+  },
+  {
+    id: 'service-analysis',
+    description: 'Capital Markets',
+    href: '#services',
+  }
+];
+
 export function HighlightsSection() {
-  // We'll use the service images for the highlights section, ensuring we have one for each service.
-  const highlightImages = PlaceHolderImages.filter(img => img.id.startsWith('service-')).slice(0, 4);
+  const highlightImages = servicesHighlights.map(service => {
+    const placeholder = PlaceHolderImages.find(img => img.id === service.id);
+    return {
+      ...service,
+      imageUrl: placeholder?.imageUrl,
+      imageHint: placeholder?.imageHint,
+      altText: placeholder?.description || service.description,
+    };
+  });
 
   return (
     <section id="highlights" className="py-16 md:py-24 bg-background">
@@ -15,19 +45,21 @@ export function HighlightsSection() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {highlightImages.map((image) => (
-            <Link key={image.id} href="#services" className="block relative aspect-video overflow-hidden rounded-lg shadow-lg group">
-              <Image
-                src={image.imageUrl}
-                alt={image.description}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                data-ai-hint={image.imageHint}
-              />
-              <div className="absolute inset-0 bg-black/40" />
-               <div className="absolute bottom-0 left-0 p-4">
-                <p className="text-white font-semibold">{image.description}</p>
-              </div>
-            </Link>
+            image.imageUrl && (
+              <Link key={image.id} href={image.href} className="block relative aspect-video overflow-hidden rounded-lg shadow-lg group">
+                <Image
+                  src={image.imageUrl}
+                  alt={image.altText}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  data-ai-hint={image.imageHint}
+                />
+                <div className="absolute inset-0 bg-black/40" />
+                 <div className="absolute bottom-0 left-0 p-4">
+                  <p className="text-white font-semibold">{image.description}</p>
+                </div>
+              </Link>
+            )
           ))}
         </div>
       </div>
