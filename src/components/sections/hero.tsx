@@ -25,7 +25,7 @@ export function HeroSection() {
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl font-headline">
               Finansal Yönetim Danışmanlığı
             </h1>
-            <h2 className="mt-4 text-2xl font-semibold text-accent sm:text-3xl">ECB GLOBAL</h2>
+            <h2 className="mt-4 text-2xl font-semibold text-accent sm:text-3xl font-headline">ECB GLOBAL</h2>
             <p className="mt-6 text-lg text-gray-200 md:text-xl">
               Finans süreçlerini uçtan uca yönetecek uzman desteği için iletişime geçebilirsiniz.
             </p>
