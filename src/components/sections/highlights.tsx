@@ -22,7 +22,12 @@ const servicesHighlights = [
     id: 'service-analysis',
     description: 'Capital Markets',
     href: '#services',
-  }
+  },
+  {
+    id: 'service-foreign-funds',
+    description: 'Foreign Funds',
+    href: '#services',
+  },
 ];
 
 export function HighlightsSection() {
@@ -43,7 +48,7 @@ export function HighlightsSection() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">Hizmetlerimiz</h2>
           <p className="mt-4 text-lg text-muted-foreground">Görsel bir bakışla sunduğumuz temel hizmet alanları.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {highlightImages.map((image) => (
             image.imageUrl && (
               <Link key={image.id} href={image.href} className="block relative aspect-video overflow-hidden rounded-lg shadow-lg group">

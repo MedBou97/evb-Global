@@ -31,6 +31,12 @@
       "imageHint": "market analysis"
     },
     {
+      "id": "service-foreign-funds",
+      "description": "Yabancı Fonlar",
+      "imageUrl": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3JlaWduJTIwZnVuZHN8ZW58MHx8fHwxNzY1MTEzODc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "foreign funds"
+    },
+    {
       "id": "team-member-1",
       "description": "Professional headshot of Jane Doe, CEO.",
       "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NjQ3NjIxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
