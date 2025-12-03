@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Check } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const servicesHighlights = [
   {
@@ -68,9 +69,8 @@ const highlightImages = servicesHighlights.map((service) => {
   };
 });
 
-export function HighlightsSection() {
-  const renderHighlightCard = (image: (typeof highlightImages)[0]) => (
-    <div key={image.id} className="block group flex flex-col">
+const PyramidCard = ({ image, className }: { image: (typeof highlightImages)[0]; className?: string }) => (
+    <div className={cn("flex flex-col group", className)}>
       <Link href={image.href} className="block relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg mb-4">
         {image.imageUrl && (
           <Image
@@ -100,6 +100,11 @@ export function HighlightsSection() {
     </div>
   );
 
+
+export function HighlightsSection() {
+  const topRow = highlightImages.slice(0, 2);
+  const bottomRow = highlightImages.slice(2);
+
   return (
     <section id="highlights" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -107,8 +112,19 @@ export function HighlightsSection() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">Hizmetlerimiz</h2>
           <p className="mt-4 text-lg text-muted-foreground">Görsel bir bakışla sunduğumuz temel hizmet alanları.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {highlightImages.map(renderHighlightCard)}
+        <div className="flex flex-col items-center gap-8">
+            {/* Top row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-4xl">
+                {topRow.map((image) => (
+                    <PyramidCard key={image.id} image={image} />
+                ))}
+            </div>
+            {/* Bottom row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                {bottomRow.map((image) => (
+                    <PyramidCard key={image.id} image={image} />
+                ))}
+            </div>
         </div>
       </div>
     </section>

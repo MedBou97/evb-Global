@@ -1,6 +1,18 @@
 import Link from 'next/link';
-import { Twitter, Linkedin, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Facebook, Mail, Phone, MapPin, Instagram } from 'lucide-react';
 import { EcbLogo } from '../icons';
+
+const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
 
 const sectors = [
   { name: 'Kurumsal Finansman', href: '/kurumsal-finansman' },
@@ -77,14 +89,17 @@ export function Footer() {
         <div className="mt-12 border-t border-border pt-8 flex flex-col items-center justify-between gap-6 sm:flex-row">
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} ECB Global. Tüm hakları saklıdır.</p>
           <div className="flex items-center gap-4">
-            <Link href="#" aria-label="Twitter">
-              <Twitter className="h-5 w-5 transition-colors hover:text-primary" />
+            <Link href="#" aria-label="X">
+              <XIcon className="h-5 w-5 transition-colors hover:text-primary" />
             </Link>
             <Link href="#" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5 transition-colors hover:text-primary" />
             </Link>
             <Link href="#" aria-label="Facebook">
               <Facebook className="h-5 w-5 transition-colors hover:text-primary" />
+            </Link>
+            <Link href="#" aria-label="Instagram">
+              <Instagram className="h-5 w-5 transition-colors hover:text-primary" />
             </Link>
           </div>
         </div>
