@@ -8,9 +8,9 @@ import {
   LineChart,
   History,
   Eye,
-  BadgeCheck,
   Scale,
   Receipt,
+  Landmark,
 } from 'lucide-react';
 
 const advantages = [
