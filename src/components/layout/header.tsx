@@ -114,7 +114,7 @@ export function Header() {
           </Link>
         </div>
         
-        <nav className="hidden items-center gap-4 md:flex flex-1 justify-center">
+        <nav className="hidden items-center gap-8 md:flex flex-1 justify-center">
           {navLinks.map((link) =>
             link.subLinks ? (
               <div
@@ -124,7 +124,7 @@ export function Header() {
               >
                 <DropdownMenu open={openDropdown === link.label}>
                   <DropdownMenuTrigger asChild>
-                    <Button asChild variant="ghost" className="group flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent/50 hover:text-primary">
+                    <Button asChild variant="ghost" className="group flex items-center gap-1 rounded-md px-3 py-2 text-base font-headline font-medium transition-colors hover:bg-accent/50 hover:text-primary">
                       <Link href={link.href!}>
                         {link.label}
                         <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
@@ -150,7 +150,7 @@ export function Header() {
               <Button key={link.label} asChild variant="ghost">
                 <Link
                   href={link.href!}
-                  className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent/50 hover:text-primary"
+                  className="rounded-md px-3 py-2 text-base font-headline font-medium transition-colors hover:bg-accent/50 hover:text-primary"
                 >
                   {link.label}
                 </Link>
