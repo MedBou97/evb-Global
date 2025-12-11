@@ -14,7 +14,7 @@ export default {
         headline: ['"Playfair Display"', 'serif'],
         logo: ['"Cinzel"', 'serif'],
         code: ['monospace'],
-        submenu: ['"Jost"', 'sans-serif'],
+        submenu: ['"Mulish"', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
