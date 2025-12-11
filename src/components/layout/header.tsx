@@ -36,11 +36,11 @@ const navLinks = [
     icon: Building,
     href: '/kurumsal-finansman',
     subLinks: [
-      { href: '/investment-consulting', label: 'Yatırım Danışmanlığı', icon: Building },
-      { href: '/international-loans', label: 'Uluslararası Krediler', icon: Globe },
-      { href: '/hermes-loans', label: 'Hermes Kredileri', icon: Handshake },
-      { href: '/uluslararasi-yapilanma', label: 'Uluslararası Yapılanma', icon: Building },
-      { href: '/mergers-and-acquisitions', label: 'M&A (Birleşme ve Satın Alma)', icon: Handshake },
+      { href: '/investment-consulting', label: 'Yatırım Danışmanlığı' },
+      { href: '/international-loans', label: 'Uluslararası Krediler' },
+      { href: '/hermes-loans', label: 'Hermes Kredileri' },
+      { href: '/uluslararasi-yapilanma', label: 'Uluslararası Yapılanma' },
+      { href: '/mergers-and-acquisitions', label: 'M&A (Birleşme ve Satın Alma)' },
     ],
   },
   {
@@ -48,9 +48,9 @@ const navLinks = [
     icon: Landmark,
     href: '/kurumsal-yonetim',
     subLinks: [
-      { href: '/kurumsal-risk-yonetimi', label: 'Kurumsal Risk Yönetimi', icon: Landmark },
-      { href: '/aile-sirketlerinde-kurumsallasma', label: 'Aile Şirketlerinde Kurumsallaşma', icon: Landmark },
-      { href: '/surdurulebilirlik', label: 'Sürdürülebilirlik', icon: Landmark },
+      { href: '/kurumsal-risk-yonetimi', label: 'Kurumsal Risk Yönetimi' },
+      { href: '/aile-sirketlerinde-kurumsallasma', label: 'Aile Şirketlerinde Kurumsallaşma' },
+      { href: '/surdurulebilirlik', label: 'Sürdürülebilirlik' },
     ],
   },
   { href: '/halka-arz', label: 'Halka Arz', icon: TrendingUp },
@@ -59,10 +59,10 @@ const navLinks = [
     icon: Handshake,
     href: '/sermaye-piyasasi',
     subLinks: [
-      { href: '/girisim-sermayesi-yatirim-ortakligi', label: 'Girişim Sermayesi Yatırım Ortaklığı', icon: Rocket },
-      { href: '/gayrimenkul-yatirim-ortakligi', label: 'Gayrimenkul Yatırım Ortaklığı', icon: Building },
-      { href: '/gayrimenkul-yatirim-fonu', label: 'Gayrimenkul Yatırım Fonu', icon: HomeIcon },
-      { href: '/borclanma-araclari', label: 'Borçlanma Araçları', icon: FileSignature },
+      { href: '/girisim-sermayesi-yatirim-ortakligi', label: 'Girişim Sermayesi Yatırım Ortaklığı' },
+      { href: '/gayrimenkul-yatirim-ortakligi', label: 'Gayrimenkul Yatırım Ortaklığı' },
+      { href: '/gayrimenkul-yatirim-fonu', label: 'Gayrimenkul Yatırım Fonu' },
+      { href: '/borclanma-araclari', label: 'Borçlanma Araçları' },
     ],
   },
   {
@@ -70,9 +70,9 @@ const navLinks = [
     icon: Globe,
     href: '/yabanci-fon',
     subLinks: [
-      { href: '/fon-kurulumu', label: 'Fon Kurulumu', icon: Briefcase },
-      { href: '/yapilandirma', label: 'Yapılandırma', icon: Globe },
-      { href: '/vergi-planlamasi', label: 'Vergi Planlaması', icon: Globe },
+      { href: '/fon-kurulumu', label: 'Fon Kurulumu' },
+      { href: '/yapilandirma', label: 'Yapılandırma' },
+      { href: '/vergi-planlamasi', label: 'Vergi Planlaması' },
     ],
   },
   { href: '/iletisim', label: 'İletişim', icon: Mail },
@@ -128,7 +128,6 @@ export function Header() {
                     {link.subLinks.map((subLink) => (
                       <DropdownMenuItem key={subLink.label} asChild>
                         <Link href={subLink.href} className="flex items-center gap-2">
-                          {subLink.icon && <subLink.icon className="h-4 w-4 text-muted-foreground" />}
                           <span>{subLink.label}</span>
                         </Link>
                       </DropdownMenuItem>
