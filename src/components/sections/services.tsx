@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Check, ClipboardList, TrendingUp, DraftingCompass, BarChart, Rocket, Target } from 'lucide-react';
+import { Check, ClipboardList, TrendingUp, DraftingCompass, BarChart } from 'lucide-react';
 import { AnimatedSection } from '../animated-section';
 
 const services = [
@@ -79,45 +79,6 @@ export function ServicesSection() {
               </Card>
             </AnimatedSection>
           ))}
-          <AnimatedSection delay={services.length * 100} className="md:col-span-2 lg:col-span-2">
-             <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full bg-secondary">
-                <CardHeader>
-                    <div className="flex items-center gap-4">
-                      <div className="p-4 rounded-full bg-accent/20 text-accent">
-                        <Rocket className="h-8 w-8" />
-                      </div>
-                      <CardTitle className="font-headline text-2xl">Çözüm Odaklı ve Yenilikçi</CardTitle>
-                    </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Şirketinizin öncelikleri ve hedefleri doğrultusunda bütünleşik kurumsal gelişim ve büyüme çözümleri sunuyoruz.
-                  </p>
-                </CardContent>
-              </Card>
-          </AnimatedSection>
-           <AnimatedSection delay={100} className="md:col-span-1">
-              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full text-center bg-secondary">
-                <CardContent className="flex flex-col flex-grow items-center justify-center p-6">
-                  <div className="p-4 rounded-full bg-primary/10 text-primary mb-4">
-                    <Rocket className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Misyonumuz</h3>
-                  <p className="text-muted-foreground">Müşterilerimize sürdürülebilir büyüme ve rekabet avantajı sağlayacak yenilikçi ve stratejik çözümler sunmak.</p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-            <AnimatedSection delay={200} className="md:col-span-1">
-              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full text-center bg-secondary">
-                <CardContent className="flex flex-col flex-grow items-center justify-center p-6">
-                  <div className="p-4 rounded-full bg-primary/10 text-primary mb-4">
-                    <Target className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Vizyonumuz</h3>
-                  <p className="text-muted-foreground">Finans ve danışmanlık sektöründe küresel ölçekte lider ve en güvenilir iş ortağı olmak.</p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
         </div>
       </div>
     </section>
