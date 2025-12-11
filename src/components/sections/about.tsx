@@ -9,7 +9,7 @@ export function AboutSection() {
         <AnimatedSection>
           <div className="text-center max-w-3xl mx-auto mb-12">
               <p className="text-lg md:text-xl text-muted-foreground">
-                ECB Global Danışmanlık, kendi alanında uzman ve tecrübeli kadrosu ile uçtan uca bütüncül bir şekilde şirketlerin kurumsal altyapılarının oluşturulmasını sağlar.
+                Proaktif eylemlerin şirketler için nasıl değerli stratejik fırsatlar sunabileceğini ortaya koyuyoruz. Detaylar için bizimle iletişime geçin.
               </p>
           </div>
         </AnimatedSection>

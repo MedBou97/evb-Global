@@ -45,7 +45,7 @@ export function HeroSection() {
                 Bugünün liderleri, nasıl yarının liderlerine dönüşüyor?
               </h1>
               <p className="mt-6 text-lg text-gray-200 md:text-xl">
-                Proaktif eylemlerin şirketler için nasıl değerli stratejik fırsatlar sunabileceğini ortaya koyuyoruz. Detaylar için bizimle iletişime geçin.
+                ECB Global Danışmanlık, kendi alanında uzman ve tecrübeli kadrosu ile uçtan uca bütüncül bir şekilde şirketlerin kurumsal altyapılarının oluşturulmasını sağlar.
               </p>
             </div>
 
