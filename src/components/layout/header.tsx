@@ -150,9 +150,7 @@ export function Header() {
         </nav>
         
         <div className="hidden md:flex flex-1 justify-end">
-           <Button asChild>
-              <Link href="/iletisim">Bize Ulaşın</Link>
-            </Button>
+           
         </div>
 
         <div className="md:hidden flex-1 flex justify-end">
