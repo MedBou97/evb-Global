@@ -56,7 +56,7 @@ export function ServicesSection() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {services.map((service, index) => (
             <AnimatedSection key={index} delay={index * 100}>
-              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full bg-secondary">
                 <CardHeader>
                     <div className="flex items-center gap-4">
                       <div className="p-4 rounded-full bg-accent/20 text-accent">
@@ -80,7 +80,7 @@ export function ServicesSection() {
             </AnimatedSection>
           ))}
           <AnimatedSection delay={services.length * 100} className="md:col-span-2 lg:col-span-2">
-             <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+             <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full bg-secondary">
                 <CardHeader>
                     <div className="flex items-center gap-4">
                       <div className="p-4 rounded-full bg-accent/20 text-accent">
@@ -97,7 +97,7 @@ export function ServicesSection() {
               </Card>
           </AnimatedSection>
            <AnimatedSection delay={100} className="md:col-span-1">
-              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full text-center">
+              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full text-center bg-secondary">
                 <CardContent className="flex flex-col flex-grow items-center justify-center p-6">
                   <div className="p-4 rounded-full bg-primary/10 text-primary mb-4">
                     <Rocket className="h-8 w-8" />
@@ -108,7 +108,7 @@ export function ServicesSection() {
               </Card>
             </AnimatedSection>
             <AnimatedSection delay={200} className="md:col-span-1">
-              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full text-center">
+              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full text-center bg-secondary">
                 <CardContent className="flex flex-col flex-grow items-center justify-center p-6">
                   <div className="p-4 rounded-full bg-primary/10 text-primary mb-4">
                     <Target className="h-8 w-8" />
