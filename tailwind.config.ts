@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['"Inter"', 'sans-serif'],
+        body: ['"Open Sans"', 'sans-serif'],
         headline: ['"Playfair Display"', 'serif'],
         logo: ['"Cinzel"', 'serif'],
         code: ['monospace'],
