@@ -5,12 +5,6 @@ import * as React from 'react';
 import Link from 'next/link';
 import {
   Menu,
-  Building,
-  Landmark,
-  TrendingUp,
-  Handshake,
-  Globe,
-  Mail,
   ChevronDown,
   Home as HomeIcon,
 } from 'lucide-react';
@@ -108,7 +102,7 @@ export function Header() {
               >
                 <DropdownMenu open={openDropdown === link.label}>
                   <DropdownMenuTrigger asChild>
-                    <Button asChild variant="ghost" className="group flex items-center gap-1 rounded-md px-3 py-2 text-lg font-headline font-medium transition-colors hover:bg-transparent hover:text-primary">
+                    <Button asChild variant="ghost" className="group flex items-center gap-1 rounded-md px-3 py-2 text-lg font-headline font-medium transition-colors hover:bg-transparent hover:text-amber-700">
                       <Link href={link.href!}>
                         {link.label}
                         <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
@@ -136,7 +130,7 @@ export function Header() {
               <Button key={link.label} asChild variant="ghost" className="text-lg font-headline font-medium">
                 <Link
                   href={link.href!}
-                  className="rounded-md px-3 py-2 transition-colors hover:bg-transparent hover:text-primary"
+                  className="rounded-md px-3 py-2 transition-colors hover:bg-transparent hover:text-amber-700"
                 >
                   {link.label}
                 </Link>
