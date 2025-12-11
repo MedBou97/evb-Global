@@ -31,7 +31,6 @@ import { EcbLogo } from '../icons';
 const navLinks = [
   {
     label: 'Kurumsal Finans',
-    icon: Building,
     href: '/kurumsal-finansman',
     subLinks: [
       { href: '/investment-consulting', label: 'Yatırım Danışmanlığı' },
@@ -43,7 +42,6 @@ const navLinks = [
   },
   {
     label: 'Kurumsal Yönetim',
-    icon: Landmark,
     href: '/kurumsal-yonetim',
     subLinks: [
       { href: '/kurumsal-risk-yonetimi', label: 'Kurumsal Risk Yönetimi' },
@@ -51,10 +49,9 @@ const navLinks = [
       { href: '/surdurulebilirlik', label: 'Sürdürülebilirlik' },
     ],
   },
-  { href: '/halka-arz', label: 'Halka Arz', icon: TrendingUp },
+  { href: '/halka-arz', label: 'Halka Arz' },
   {
     label: 'Sermaye Piyasası',
-    icon: Handshake,
     href: '/sermaye-piyasasi',
     subLinks: [
       { href: '/girisim-sermayesi-yatirim-ortakligi', label: 'Girişim Sermayesi Yatırım Ortaklığı' },
@@ -65,7 +62,6 @@ const navLinks = [
   },
   {
     label: 'Yurt Dışı Fon',
-    icon: Globe,
     href: '/yabanci-fon',
     subLinks: [
       { href: '/fon-kurulumu', label: 'Fon Kurulumu' },
@@ -73,7 +69,7 @@ const navLinks = [
       { href: '/vergi-planlamasi', label: 'Vergi Planlaması' },
     ],
   },
-  { href: '/iletisim', label: 'İletişim', icon: Mail },
+  { href: '/iletisim', label: 'İletişim' },
 ];
 
 export function Header() {
@@ -97,7 +93,7 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <div className="flex-1 flex justify-start">
           <Link href="/" className="flex items-center gap-2">
-            <HomeIcon className="h-6 w-6 text-primary" />
+            
             <EcbLogo />
           </Link>
         </div>
@@ -112,7 +108,7 @@ export function Header() {
               >
                 <DropdownMenu open={openDropdown === link.label}>
                   <DropdownMenuTrigger asChild>
-                    <Button asChild variant="ghost" className="group flex items-center gap-1 rounded-md px-3 py-2 text-lg font-headline font-medium transition-colors hover:bg-accent/50 hover:text-primary">
+                    <Button asChild variant="ghost" className="group flex items-center gap-1 rounded-md px-3 py-2 text-lg font-headline font-medium transition-colors hover:bg-transparent hover:text-primary">
                       <Link href={link.href!}>
                         {link.label}
                         <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
@@ -140,7 +136,7 @@ export function Header() {
               <Button key={link.label} asChild variant="ghost" className="text-lg font-headline font-medium">
                 <Link
                   href={link.href!}
-                  className="rounded-md px-3 py-2 transition-colors hover:bg-accent/50 hover:text-primary"
+                  className="rounded-md px-3 py-2 transition-colors hover:bg-transparent hover:text-primary"
                 >
                   {link.label}
                 </Link>
@@ -176,8 +172,7 @@ export function Header() {
                       <AccordionItem value={link.label} key={link.label} className="border-b-0">
                           <AccordionTrigger className="flex w-full items-center gap-2 rounded-md py-2 px-3 text-base font-medium transition-colors hover:bg-accent/50 hover:no-underline justify-start">
                             <Link href={link.href!} className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
-                             <link.icon className="h-5 w-5" />
-                             <span>{link.label}</span>
+                             {link.label}
                             </Link>
                           </AccordionTrigger>
                           <AccordionContent className="pb-0 pl-8">
@@ -202,8 +197,7 @@ export function Header() {
                         className="flex items-center gap-2 rounded-md py-2 px-3 text-base font-medium transition-colors hover:bg-accent/50 hover:text-primary"
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        <link.icon className="h-5 w-5" />
-                        <span>{link.label}</span>
+                        {link.label}
                       </Link>
                     )
                   )}
