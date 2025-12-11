@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Check, ClipboardList, TrendingUp, DraftingCompass, BarChart, Rocket } from 'lucide-react';
+import { Check, ClipboardList, TrendingUp, DraftingCompass, BarChart, Rocket, Target } from 'lucide-react';
 import { AnimatedSection } from '../animated-section';
 
 const services = [
@@ -51,7 +51,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-16 md:py-24 bg-secondary">
+    <section id="services" className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {services.map((service, index) => (
@@ -96,6 +96,28 @@ export function ServicesSection() {
                 </CardContent>
               </Card>
           </AnimatedSection>
+           <AnimatedSection delay={100} className="md:col-span-1">
+              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full text-center">
+                <CardContent className="flex flex-col flex-grow items-center justify-center p-6">
+                  <div className="p-4 rounded-full bg-primary/10 text-primary mb-4">
+                    <Rocket className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Misyonumuz</h3>
+                  <p className="text-muted-foreground">Müşterilerimize sürdürülebilir büyüme ve rekabet avantajı sağlayacak yenilikçi ve stratejik çözümler sunmak.</p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+            <AnimatedSection delay={200} className="md:col-span-1">
+              <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full text-center">
+                <CardContent className="flex flex-col flex-grow items-center justify-center p-6">
+                  <div className="p-4 rounded-full bg-primary/10 text-primary mb-4">
+                    <Target className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Vizyonumuz</h3>
+                  <p className="text-muted-foreground">Finans ve danışmanlık sektöründe küresel ölçekte lider ve en güvenilir iş ortağı olmak.</p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
         </div>
       </div>
     </section>
