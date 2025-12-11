@@ -75,6 +75,7 @@ const navLinks = [
       { href: '/vergi-planlamasi', label: 'Vergi Planlaması', icon: Globe },
     ],
   },
+  { href: '/iletisim', label: 'İletişim', icon: Mail },
 ];
 
 export function Header() {
@@ -87,17 +88,6 @@ export function Header() {
 
   const handleMouseLeave = () => {
     setOpenDropdown(null);
-  };
-
-  const scrollToContact = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
-    e.preventDefault();
-    const contactElement = document.getElementById('contact');
-    if (contactElement) {
-      contactElement.scrollIntoView({ behavior: 'smooth' });
-    }
-    if (mobileMenuOpen) {
-      setMobileMenuOpen(false);
-    }
   };
 
   return (
@@ -160,7 +150,9 @@ export function Header() {
         </nav>
         
         <div className="hidden md:flex flex-1 justify-end">
-           <Button onClick={scrollToContact}>İletişim</Button>
+           <Button asChild>
+              <Link href="/iletisim">Bize Ulaşın</Link>
+            </Button>
         </div>
 
         <div className="md:hidden flex-1 flex justify-end">
@@ -217,14 +209,6 @@ export function Header() {
                       </Link>
                     )
                   )}
-                   <a
-                        href="#contact"
-                        className="flex items-center gap-2 rounded-md py-2 px-3 text-base font-medium transition-colors hover:bg-accent/50 hover:text-primary"
-                        onClick={scrollToContact}
-                      >
-                        <Mail className="h-5 w-5" />
-                        <span>İletişim</span>
-                      </a>
                   </Accordion>
                 </nav>
               </div>
