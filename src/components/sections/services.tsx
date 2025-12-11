@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Check, ClipboardList, TrendingUp, DraftingCompass, BarChart } from 'lucide-react';
+import { Check, ClipboardList, TrendingUp, DraftingCompass, BarChart, Rocket } from 'lucide-react';
 import { AnimatedSection } from '../animated-section';
 
 const services = [
@@ -79,6 +79,23 @@ export function ServicesSection() {
               </Card>
             </AnimatedSection>
           ))}
+          <AnimatedSection delay={services.length * 100} className="md:col-span-2 lg:col-span-2">
+             <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="p-4 rounded-full bg-accent/20 text-accent">
+                        <Rocket className="h-8 w-8" />
+                      </div>
+                      <CardTitle className="font-headline text-2xl">Çözüm Odaklı ve Yenilikçi</CardTitle>
+                    </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Şirketinizin öncelikleri ve hedefleri doğrultusunda bütünleşik kurumsal gelişim ve büyüme çözümleri sunuyoruz.
+                  </p>
+                </CardContent>
+              </Card>
+          </AnimatedSection>
         </div>
       </div>
     </section>
